@@ -24,32 +24,3 @@ models:
     marts:
       +schema: gold
       +materialized: table
-```
-
-Click **Commit changes** → **Commit directly to main branch**
-
----
-
-### FILE 2: `.gitignore`
-
-Click **Add file** → **Create new file**
-- **Filename**: `.gitignore`
-- **Content**:
-```
-target/
-dbt_packages/
-logs/
-*.log
-profiles.yml
-dbt-env/
-.venv/
-venv/
-.vscode/
-.idea/
-*.swp
-*.swo
-.DS_Store
-Thumbs.db
-__pycache__/
-*.pyc
-*.egg-info/
