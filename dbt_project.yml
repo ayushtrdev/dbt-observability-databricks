@@ -2,6 +2,11 @@ name: 'dbt_observability'
 version: '1.0.0'
 config-version: 2
 profile: 'databricks'
+
+# Add these lines
+vars:
+  dbt_cloud_metrics_schema: raw
+
 model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
@@ -11,9 +16,11 @@ target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
+
 models:
   dbt_observability:
     +materialized: table
+    +catalog: workspace
     staging:
       +schema: bronze
       +materialized: table
