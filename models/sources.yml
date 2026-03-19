@@ -2,8 +2,9 @@ version: 2
 
 sources:
   - name: raw
-    database: hive_metastore
     schema: raw
+    meta:
+      external_location: false
     tables:
       - name: customers
       - name: products
