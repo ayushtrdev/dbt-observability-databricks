@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw
+    database: hive_metastore
+    schema: raw
+    description: "Raw e-commerce data from source systems"
+    tables:
+      - name: customers
+        description: "Raw customer data with quality issues"
+        columns:
+          - name: customer_id
+            description: "Unique customer identifier"
+
+      - name: products
+        description: "Product master data"
+        columns:
+          - name: product_id
+            description: "Unique product identifier"
+
+      - name: orders
+        description: "Order transaction data"
+        columns:
+          - name: order_id
+            description: "Unique order identifier"
+
+      - name: sales
+        description: "Sales line items (1M rows)"
+        columns:
+          - name: sale_id
+            description: "Unique sale identifier"
