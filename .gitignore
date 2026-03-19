@@ -1,0 +1,17 @@
+target/
+dbt_packages/
+logs/
+*.log
+profiles.yml
+dbt-env/
+.venv/
+venv/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+*.egg-info/
